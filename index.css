@@ -1,0 +1,128 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 1200px; /* Tambahan untuk batas lebar */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    color: #333;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-muted {
+    color: #666 !important;
+}
+
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.table thead th {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-weight: 600;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(102, 126, 234, 0.1);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+.table tbody td {
+    vertical-align: middle;
+    padding: 15px;
+}
+
+.btn-login {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+}
+
+.btn-login:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.7);
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    color: white;
+}
+
+.icon-day {
+    margin-right: 8px;
+}
+
+.no-data {
+    text-align: center;
+    padding: 50px;
+    color: #999;
+    font-style: italic;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header-section i {
+    font-size: 3rem;
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+/* Responsivitas tambahan */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .header-section i {
+        font-size: 2rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    .table tbody td {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .btn-login {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

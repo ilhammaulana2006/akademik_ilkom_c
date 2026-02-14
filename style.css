@@ -1,0 +1,117 @@
+/* style.css - File CSS terpisah yang lebih keren */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap'); /* Font modern dari Google Fonts */
+
+body {
+    font-family: 'Poppins', sans-serif; /* Font yang lebih stylish dan readable */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); /* Gradient yang lebih kompleks dan vibrant */
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 0 0 20px rgba(255,255,255,0.5), 2px 2px 4px rgba(0,0,0,0.5); /* Glow effect dan shadow */
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    animation: fadeInUp 1s ease-out; /* Animasi masuk */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+table {
+    width: 100%;
+    max-width: 1400px; /* Lebih lebar untuk tampilan yang lebih luas */
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.15); /* Transparansi yang lebih tinggi untuk efek glassmorphism */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4), 0 0 20px rgba(255,255,255,0.1); /* Shadow yang lebih dramatis dengan glow */
+    backdrop-filter: blur(15px); /* Blur yang lebih kuat untuk efek glass */
+    animation: slideIn 0.8s ease-out; /* Animasi slide in */
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+th, td {
+    padding: 18px 25px; /* Padding yang lebih besar untuk kenyamanan */
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.3); /* Border yang lebih visible */
+    position: relative;
+}
+
+th {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1)); /* Gradient pada header */
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 1.5px;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.08); /* Background yang lebih subtle */
+}
+
+tr:hover {
+    background: rgba(255, 255, 255, 0.2); /* Hover yang lebih prominent */
+    transform: scale(1.02) translateY(-2px); /* Scale dan lift effect */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Transisi yang lebih smooth dengan easing */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Shadow pada hover */
+}
+
+.no-data {
+    text-align: center;
+    padding: 60px;
+    font-size: 1.4em;
+    color: rgba(255,255,255,0.8);
+    font-style: italic;
+}
+
+/* Responsivitas untuk mobile */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    table {
+        max-width: 100%;
+        font-size: 0.9em;
+    }
+    th, td {
+        padding: 12px 15px;
+    }
+    tr:hover {
+        transform: none; /* Matikan transform pada mobile untuk menghindari masalah */
+    }
+}
+
+/* Efek tambahan: Icon pada header (opsional, jika ingin tambah elemen HTML) */
+th::before {
+    content: '📅'; /* Icon untuk hari, bisa diganti sesuai kolom */
+    margin-right: 8px;
+    opacity: 0.8;
+}
+/* Tambahkan icon spesifik jika diperlukan, misalnya untuk Dosen: th:nth-child(2)::before { content: '👨‍🏫'; } */

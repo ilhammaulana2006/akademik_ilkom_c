@@ -1,0 +1,570 @@
+/* admin_biodata.css - Gabungan Versi Desktop dan Mobile dengan Update */
+
+/* Variabel CSS untuk konsistensi */
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(135deg, #28a745, #20c997, #17a2b8);
+    --error-color: #ff6b6b;
+    --success-color: #4ecdc4;
+    --warning-color: #ffa726;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --shadow-light: rgba(255, 255, 255, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.2);
+    --border-light: rgba(255, 255, 255, 0.3);
+    --bg-overlay: rgba(255, 255, 255, 0.1);
+    --transition: all 0.3s ease;
+    --border-radius: 15px;
+    --font-size-base: 14px;
+}
+
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--primary-gradient);
+    color: var(--text-light);
+    transition: background 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    font-size: var(--font-size-base);
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #ecf0f1;
+}
+
+/* Particle background disederhanakan untuk performa */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.2) 0%, transparent 50%);
+    animation: particleFloat 20s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes particleFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(180deg); }
+}
+
+/* Container */
+.container {
+    background: var(--bg-overlay);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: 0 15px 35px var(--shadow-dark);
+    max-width: 900px;
+    width: 100%;
+    animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body.dark-mode .container {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.welcome-header h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Navbar */
+.navbar {
+    margin-bottom: 30px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: var(--text-light);
+    background: var(--bg-overlay);
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: var(--transition);
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-container a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.nav-container a:hover::before {
+    left: 100%;
+}
+
+.nav-container a:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--shadow-dark);
+}
+
+body.dark-mode .nav-container a {
+    color: #ecf0f1;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Form Section */
+.schedule-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.form-container form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form-container input[type="text"] {
+    padding: 12px 20px;
+    border: 2px solid var(--border-light);
+    border-radius: 25px;
+    width: 300px;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.8);
+    transition: var(--transition);
+    outline: none;
+}
+
+.form-container input[type="text"]:focus {
+    border-color: var(--success-color);
+    box-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+    background: rgba(255, 255, 255, 1);
+}
+
+.form-container button {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    color: var(--text-light);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.form-container button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.form-container button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.form-container button:hover::before {
+    left: 100%;
+}
+
+/* Biodata Display */
+.biodata-display {
+    background: var(--bg-overlay);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 10px 30px var(--shadow-dark);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body.dark-mode .biodata-display {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.biodata-display h4 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--success-color);
+}
+
+.biodata-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-light);
+    transition: var(--transition);
+}
+
+.biodata-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.biodata-item:last-child {
+    border-bottom: none;
+}
+
+.biodata-item strong {
+    color: #ff6b6b;
+    font-weight: 600;
+}
+
+.edit-button-container {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.edit-button, .delete-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: var(--transition);
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+}
+
+.edit-button {
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+    color: var(--text-light);
+}
+
+.edit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.4);
+}
+
+.delete-button {
+    background: linear-gradient(45deg, #ff6b6b, #e74c3c);
+    color: var(--text-light);
+}
+
+.delete-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.edit-button::before, .delete-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.edit-button:hover::before, .delete-button:hover::before {
+    left: 100%;
+}
+
+/* Error */
+.error {
+    text-align: center;
+    color: var(--error-color);
+    font-weight: bold;
+    margin-top: 20px;
+    animation: shake 0.5s ease-in-out;
+    background: rgba(255, 107, 107, 0.1);
+    padding: 10px;
+    border-radius: var(--border-radius);
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Success message (jika diperlukan di masa depan) */
+.success {
+    text-align: center;
+    color: var(--success-color);
+    font-weight: bold;
+    margin-top: 20px;
+    background: rgba(78, 205, 196, 0.1);
+    padding: 10px;
+    border-radius: var(--border-radius);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+    background: var(--bg-overlay);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px var(--shadow-dark);
+    z-index: 1000;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px var(--shadow-dark);
+}
+
+body.dark-mode .dark-mode-toggle {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Responsivitas - Desktop ke Mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        font-size: var(--font-size-base);
+    }
+
+    .container {
+        padding: 20px;
+        margin: 0 10px;
+    }
+
+    .welcome-header h2 {
+        font-size: 1.8em;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-container a {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .schedule-section h3 {
+        font-size: 1.5em;
+    }
+
+    .form-container input[type="text"] {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px; /* Mencegah zoom di iOS */
+    }
+
+    .form-container form {
+        flex-direction: column;
+    }
+
+    .form-container button {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Biodata Display untuk mobile */
+    .biodata-display {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr; /* Satu kolom untuk mobile */
+        gap: 15px;
+    }
+
+    .biodata-item {
+        background: var(--bg-overlay);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 15px;
+        border-radius: var(--border-radius);
+        box-shadow: 0 3px 10px var(--shadow-dark);
+        transition: var(--transition);
+        display: block; /* Override flex untuk mobile */
+        border-bottom: none;
+    }
+
+    .biodata-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px var(--shadow-dark);
+    }
+
+    .biodata-item strong {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 3px;
+        color: var(--text-light);
+        font-size: 13px;
+    }
+
+    .biodata-item span {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 14px;
+    }
+
+    .edit-button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .edit-button, .delete-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 20px;
+        font-size: 14px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Error untuk mobile */
+    .error {
+        font-size: 1em;
+        padding: 10px;
+        background: rgba(255, 107, 107, 0.1);
+        border-radius: var(--border-radius);
+    }
+
+    /* Dark Mode Toggle untuk mobile */
+    .dark-mode-toggle {
+        bottom: 20px;
+        right: 20px;
+        top: auto;
+        width: 50px;
+        height: 50px;
+        font-size: 1.2em;
+    }
+}
+
+/* Responsivitas tambahan untuk HP kecil (480px ke bawah) */
+@media (max-width: 480px) {
+    .welcome-header h2 {
+        font-size: 1.5em;
+    }
+    .schedule-section h3 {
+        font-size: 1.3em;
+    }
+    .biodata-display h4 {
+        font-size: 1.2em;
+    }
+    .navbar a {
+        font-size: 11px;
+        padding: 8px 12px;
+    }
+}
+
+/* Tambahan: Styling untuk hamburger menu (dari HTML inline, dipindahkan ke sini untuk konsistensi) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.nav-container {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+@media (max-width: 868px) {
+    .hamburger {
+        display: flex;
+    }
+    .nav-container {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #f8f9fa;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .nav-container.active {
+        display: flex;
+    }
+    .nav-container a {
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,169 @@
+2026-02-05 14:10:27 - Action: Delete, User ID: 24.53.031782
+2026-02-05 14:10:43 - Action: Delete, User ID: 24.53.031234
+2026-02-05 14:24:41 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 14:24:42 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 14:24:42 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 14:24:44 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 14:24:47 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 14:35:23 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 14:35:27 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 14:37:41 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 14:37:49 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 14:39:24 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 14:39:24 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 14:39:26 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 14:39:28 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 14:53:58 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 14:54:17 - Action: Delete, User ID: 12345.67892
+2026-02-05 15:02:48 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:03:20 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:03:27 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:05:25 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:06:00 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:08:41 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:15:10 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:17:03 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:17:05 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:17:07 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:21:02 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:21:16 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:22:19 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:23:33 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:23:57 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:24:18 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:25:56 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:26:52 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:27:20 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:27:48 - Action: Toggle Maintenance, User ID: admin
+2026-02-05 15:34:27 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 06:45:37 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 06:46:21 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 06:46:24 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 06:46:28 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:00:13 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:00:15 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:00:15 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:00:16 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:00:21 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:00:40 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:00:51 - Action: Delete, User ID: 12345.67891
+2026-02-06 07:00:55 - Action: Delete, User ID: 12345.67890
+2026-02-06 07:01:03 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:01:17 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:01:39 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:01:49 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:01:54 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:02:13 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:02:19 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:02:28 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:02:34 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:03:33 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:03:41 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:03:48 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:03:51 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 07:10:39 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 08:18:39 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 08:30:38 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 08:30:43 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 08:30:45 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 08:30:45 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 08:32:06 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 08:33:28 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 08:33:30 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 08:33:57 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 08:36:48 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 08:37:00 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 08:37:13 - Action: Toggle Maintenance, User ID: admin
+2026-02-06 14:36:52 - Action: Toggle Maintenance, User ID: admin
+2026-02-07 13:22:25 - Action: Toggle Maintenance, User ID: admin
+2026-02-07 13:22:42 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 11:49:58 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 11:58:02 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:11:51 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:13:53 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:23:17 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:26:12 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:26:27 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:26:55 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:27:20 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:27:29 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:27:37 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:28:00 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:28:19 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:31:11 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:31:59 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:32:11 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:35:09 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:35:29 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:39:24 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:39:50 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:54:55 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 12:55:17 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 13:52:59 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 13:53:15 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 14:51:03 - Action: Delete, User ID: 24.53.031783
+2026-02-08 14:51:12 - Action: Delete, User ID: 24.53.031234
+2026-02-08 14:53:54 - Action: Update, User ID: 24.53.031783
+2026-02-08 15:04:06 - Action: Update, User ID: 24.53.031783
+2026-02-08 15:04:36 - Action: Update, User ID: 24.53.031783
+2026-02-08 15:04:50 - Action: Delete, User ID: 24.53.031783
+2026-02-08 15:34:31 - Action: Update, User ID: 24.53.031783
+2026-02-08 15:37:19 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 15:37:27 - Action: Toggle Maintenance, User ID: admin
+2026-02-08 15:51:45 - Action: Delete Biodata, User ID: 24.53.031783
+2026-02-08 15:57:21 - Action: Delete Biodata, User ID: 24.53.031783
+2026-02-12 13:43:01 - Action: Toggle Maintenance, User ID: admin
+2026-02-12 13:43:13 - Action: Toggle Maintenance, User ID: admin
+2026-02-12 15:02:46 - Action: Toggle Maintenance, User ID: admin
+2026-02-12 15:02:50 - Action: Toggle Maintenance, User ID: admin
+2026-02-12 15:05:16 - Action: Toggle Maintenance, User ID: admin
+2026-02-12 15:07:48 - Action: Toggle Maintenance, User ID: admin
+2026-02-12 15:14:58 - Action: Toggle Maintenance, User ID: admin
+2026-02-12 15:15:00 - Action: Toggle Maintenance, User ID: admin
+2026-02-14 03:54:18 - Action: Add Tugas, User ID: Kemuhammadiyahan III
+2026-02-14 03:54:23 - Action: Informasikan Tugas, User ID: 1
+2026-02-14 03:54:34 - Action: Update Tugas, User ID: 1
+2026-02-14 03:54:45 - Action: Update Tugas, User ID: 1
+2026-02-14 03:55:05 - Action: Delete Tugas, User ID: 1
+2026-02-14 03:56:23 - Action: Add Tugas, User ID: Kemuhammadiyahan III
+2026-02-14 03:56:38 - Action: Informasikan Tugas, User ID: 2
+2026-02-14 03:59:13 - Action: Informasikan Tugas, User ID: 2
+2026-02-14 04:00:21 - Action: Informasikan Tugas, User ID: 2
+2026-02-14 04:01:46 - Action: Informasikan Tugas, User ID: 2
+2026-02-14 05:13:10 - Action: Delete Tugas, User ID: 2
+2026-02-14 05:24:47 - Action: Add Tugas, User ID: Kemuhammadiyahan III
+2026-02-14 05:52:44 - Action: Delete Tugas, User ID: 3
+2026-02-14 05:56:58 - Action: Add Tugas, User ID: Kemuhammadiyahan III
+2026-02-14 06:21:43 - Action: Toggle Maintenance, User ID: admin
+2026-02-14 06:21:46 - Action: Toggle Maintenance, User ID: admin
+2026-02-14 06:36:56 - Action: Delete Tugas, User ID: 4
+2026-02-14 07:10:38 - Action: Toggle Maintenance, User ID: admin
+2026-02-14 07:10:51 - Action: Toggle Maintenance, User ID: admin
+2026-02-14 07:54:00 - Action: Toggle Maintenance, User ID: admin
+2026-02-14 07:54:01 - Action: Toggle Maintenance, User ID: admin
+2026-02-14 07:54:56 - Action: Toggle Maintenance, User ID: admin
+2026-02-14 07:54:58 - Action: Toggle Maintenance, User ID: admin
+2026-02-14 08:03:45 - Action: Delete Tugas, User ID: <br />
+<b>Warning</b>:  Trying to access array offset on null in <b>C:\laragon\www\absen_kuliah_kelas\admin_dashboard.php</b> on line <b>464</b><br />
+
+2026-02-14 08:03:53 - Action: Delete Tugas, User ID: <br />
+<b>Warning</b>:  Trying to access array offset on null in <b>C:\laragon\www\absen_kuliah_kelas\admin_dashboard.php</b> on line <b>464</b><br />
+
+2026-02-14 08:04:12 - Action: Add Tugas, User ID: Kemuhammadiyahan III
+2026-02-14 08:04:15 - Action: Delete Tugas, User ID: 5
+2026-02-14 08:04:24 - Action: Add Tugas, User ID: Kemuhammadiyahan III
+2026-02-14 08:04:28 - Action: Delete Tugas, User ID: <br />
+<b>Warning</b>:  Trying to access array offset on null in <b>C:\laragon\www\absen_kuliah_kelas\admin_dashboard.php</b> on line <b>464</b><br />
+
+2026-02-14 08:13:36 - Action: Toggle Maintenance, User ID: admin
+2026-02-14 08:13:41 - Action: Toggle Maintenance, User ID: admin
+2026-02-14 08:13:56 - Action: Delete Tugas, User ID: 6
+2026-02-14 15:05:31 - Action: Toggle Maintenance, User ID: admin
+2026-02-14 15:05:35 - Action: Toggle Maintenance, User ID: admin
+2026-02-14 15:09:03 - Action: Toggle Maintenance, User ID: admin
+2026-02-14 15:09:07 - Action: Toggle Maintenance, User ID: admin
+2026-02-14 15:42:39 - Action: Delete, User ID: 12345
+2026-02-14 15:57:49 - Action: Toggle Maintenance, User ID: admin
+2026-02-14 15:58:03 - Action: Toggle Maintenance, User ID: admin
+2026-02-14 15:58:15 - Action: Toggle Maintenance, User ID: admin
+2026-02-14 15:58:31 - Action: Toggle Maintenance, User ID: admin

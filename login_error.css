@@ -1,0 +1,181 @@
+/* Reset dasar untuk konsistensi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body: Background dengan gradient animasi dan font dasar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font lebih modern */
+    background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c); /* Gradient warna-warni */
+    background-size: 400% 400%; /* Untuk animasi */
+    animation: gradientShift 10s ease infinite; /* Animasi gradient bergerak */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+/* Animasi gradient background */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container: Efek glassmorphism dengan animasi fade-in */
+.container {
+    background: rgba(255, 255, 255, 0.1); /* Transparan */
+    backdrop-filter: blur(15px); /* Efek blur glassmorphism */
+    -webkit-backdrop-filter: blur(15px); /* Untuk Safari */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1); /* Shadow dramatis */
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1s ease-in-out; /* Animasi muncul halus */
+    position: relative;
+}
+
+/* Animasi fade-in untuk container */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Judul h2 dengan efek glow */
+.container h2 {
+    margin-bottom: 25px;
+    color: #fff; /* Warna putih untuk kontras */
+    font-size: 28px;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Efek glow */
+}
+
+/* Form styling dengan gap yang lebih besar */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Input fields dengan efek floating label dan ikon */
+input[type="text"],
+input[type="password"] {
+    padding: 15px 15px 15px 45px; /* Ruang untuk ikon */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    font-size: 16px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #fff;
+    outline: none;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Efek glow pada focus */
+    transform: scale(1.02); /* Sedikit zoom */
+}
+
+/* Pseudo-element untuk ikon sederhana (contoh: user icon untuk nama, dll.) */
+input[type="text"]:first-of-type::before,
+input[type="password"]::before {
+    content: "👤"; /* Ikon emoji sederhana (bisa ganti dengan SVG jika perlu) */
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Button submit dengan efek ripple dan gradient */
+button[type="submit"] {
+    padding: 15px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden; /* Untuk efek ripple */
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(45deg, #5a6fd8, #6a4fa3);
+    transform: translateY(-2px); /* Efek lift */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+button[type="submit"]:active::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    animation: ripple 0.6s ease-out;
+}
+
+/* Animasi ripple */
+@keyframes ripple {
+    to {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
+
+/* Paragraph dan link dengan efek hover yang lebih smooth */
+p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #f093fb;
+    text-decoration: underline;
+    text-shadow: 0 0 5px rgba(240, 147, 251, 0.5); /* Glow pada hover */
+}
+
+/* Responsivitas untuk layar kecil */
+@media (max-width: 480px) {
+    .container {
+        padding: 25px;
+        max-width: 90%;
+    }
+    .container h2 {
+        font-size: 24px;
+    }
+    input[type="text"],
+    input[type="password"] {
+        padding: 12px 12px 12px 40px;
+    }
+    button[type="submit"] {
+        padding: 12px;
+    }
+}

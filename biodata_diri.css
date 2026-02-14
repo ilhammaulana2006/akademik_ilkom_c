@@ -1,0 +1,271 @@
+/* Reset dasar untuk konsistensi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body dengan gradien background keren */
+body {
+    font-family: 'Poppins', sans-serif; /* Font modern */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradien ungu-biru */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative; /* Untuk positioning pesan */
+}
+
+/* Container utama dengan animasi masuk */
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95); /* Semi-transparan untuk efek glassmorphism */
+    backdrop-filter: blur(10px); /* Efek blur untuk kesan modern */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 0 25px rgba(102, 126, 234, 0.1); /* Shadow dengan glow */
+    animation: fadeInUp 0.8s ease-out; /* Animasi masuk halus */
+    position: relative;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header dengan ikon */
+h1 {
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 i {
+    color: #667eea;
+    margin-right: 10px;
+}
+
+/* Form group untuk styling label dan input */
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 1rem;
+}
+
+label i {
+    color: #667eea;
+    margin-right: 8px;
+}
+
+/* Styling input dan select */
+input, select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: #fff;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.3); /* Glow pada focus */
+    transform: translateY(-2px); /* Efek lift */
+}
+
+input[readonly] {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+    border-color: #ccc;
+}
+
+/* Tombol submit dengan efek keren */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #25D366, #128C7E); /* Gradien hijau WhatsApp */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(45deg, #128C7E, #25D366);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+    transform: translateY(-3px);
+}
+
+.submit-btn i {
+    margin-right: 8px;
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.submit-btn:hover::before {
+    width: 300px;
+    height: 300px; /* Ripple effect */
+}
+
+/* Tombol kembali dengan gradien ungu */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    transition: all 0.4s ease;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.back-btn:hover {
+    background: linear-gradient(45deg, #764ba2, #667eea);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+    transform: translateY(-3px);
+}
+
+.back-btn i {
+    margin-right: 8px;
+}
+
+/* Pesan sukses/error dengan animasi - sekarang di tengah body */
+.message {
+    position: fixed; /* Fixed untuk tetap di tengah body */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Tengah secara vertikal dan horizontal */
+    padding: 20px 30px;
+    border-radius: 15px;
+    font-weight: 500;
+    text-align: center;
+    animation: slideDown 0.5s ease;
+    z-index: 1000; /* Di atas elemen lain */
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 2px solid #c3e6cb;
+}
+
+.message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 2px solid #f5c6cb;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%); /* Mulai sedikit di atas */
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Overlay untuk pesan (opsional, untuk efek modal) */
+.message-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparan hitam */
+    z-index: 999; /* Di bawah pesan tapi di atas konten */
+    display: none; /* Sembunyikan secara default */
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    input, select, .submit-btn, .back-btn {
+        font-size: 0.95rem;
+        padding: 12px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .message {
+        padding: 15px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    .message {
+        padding: 12px 15px;
+        font-size: 0.85rem;
+    }
+}

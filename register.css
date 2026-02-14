@@ -1,0 +1,90 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e142f3 0%, #ffffff 100%);
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    animation: slideIn 0.8s ease-out;
+}
+
+.register-icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 30px;
+    color: #f5576c;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #f5576c;
+    outline: none;
+}
+
+button {
+    padding: 15px;
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
+}
+
+p {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+a {
+    color: #f5576c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e74c3c;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,422 @@
+/* Import font modern dari Google Fonts (opsional, tambahkan di <head> HTML: <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset dasar untuk konsistensi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body dan background dengan efek nebula (awan kosmik) - ditambahkan scroll untuk konten panjang */
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* Font modern */
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #3a7bd5 100%); /* Gradient biru gelap */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    overflow-y: auto; /* Tambahkan scrollbar vertikal di body jika konten melebihi tinggi viewport */
+}
+
+/* Efek nebula animasi (pseudo-elements untuk atmosfer keren) - ditingkatkan dengan lebih banyak lapisan */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 70%, rgba(138, 43, 226, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(30, 144, 255, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255, 20, 147, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 40%);
+    animation: nebulaShift 6s ease-in-out infinite alternate;
+    z-index: -1; /* Pastikan nebula di belakang konten */
+}
+
+/* Tambahan efek partikel mengambang untuk lebih keren */
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="20" cy="80" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="80" cy="20" r="0.5" fill="rgba(255,255,255,0.05)"/></svg>') repeat;
+    background-size: 100px 100px;
+    animation: particleFloat 15s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes particleFloat {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-100vh) rotate(360deg); }
+}
+
+@keyframes nebulaShift {
+    0% { opacity: 0.6; transform: scale(1) rotate(0deg); }
+    100% { opacity: 1; transform: scale(1.1) rotate(1deg); }
+}
+
+/* Container utama dengan efek glassmorphism dan animasi fade-in - ukuran sedang (medium) diperbaiki untuk konsistensi */
+.container {
+    background: rgba(255, 255, 255, 0.1); /* Transparan untuk efek glass */
+    backdrop-filter: blur(20px); /* Blur lebih kuat untuk efek futuristik */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(30, 144, 255, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1); /* Shadow dengan glow biru dan inset untuk kedalaman */
+    width: 100%;
+    max-width: 600px; /* Ukuran sedang (medium) yang konsisten untuk desktop */
+    text-align: center;
+    animation: fadeInUp 1.2s ease-out;
+    position: relative;
+    z-index: 1;
+    max-height: 90vh; /* Batasi tinggi container agar tidak melebihi viewport, dan izinkan scroll internal jika perlu */
+    overflow-y: auto; /* Tambahkan scroll vertikal di container jika konten terlalu panjang */
+}
+
+/* Tambahan efek glow pulse pada container */
+.container::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(30, 144, 255, 0.1) 0%, transparent 70%);
+    animation: glowPulse 4s ease-in-out infinite alternate;
+    pointer-events: none;
+    border-radius: 25px;
+}
+
+@keyframes glowPulse {
+    0% { opacity: 0.3; transform: scale(1); }
+    100% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Ikon absen - ditingkatkan dengan efek rotate dan glow */
+.absen-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    animation: bounceIn 1s ease-out, rotateGlow 3s ease-in-out infinite alternate;
+    color: #1e90ff;
+    text-shadow: 0 0 20px rgba(30, 144, 255, 0.8);
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes rotateGlow {
+    0% { transform: rotate(0deg); filter: drop-shadow(0 0 10px rgba(30, 144, 255, 0.5)); }
+    100% { transform: rotate(10deg); filter: drop-shadow(0 0 20px rgba(30, 144, 255, 1)); }
+}
+
+/* Judul dengan efek glow dan underline animasi - ditingkatkan dengan lebih banyak efek */
+h2 {
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    text-shadow: 0 0 15px rgba(30, 144, 255, 0.8), 0 0 30px rgba(255, 20, 147, 0.4);
+    position: relative;
+    animation: textShimmer 2s ease-in-out infinite alternate;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #1e90ff, #ff1493, #00ffff);
+    animation: underlineGrow 1.5s ease-out 0.5s forwards;
+    box-shadow: 0 0 10px rgba(30, 144, 255, 0.6);
+}
+
+@keyframes textShimmer {
+    0% { text-shadow: 0 0 15px rgba(30, 144, 255, 0.8); }
+    100% { text-shadow: 0 0 25px rgba(30, 144, 255, 1), 0 0 40px rgba(255, 20, 147, 0.6); }
+}
+
+@keyframes underlineGrow {
+    to { width: 80%; }
+}
+
+/* Pesan (misalnya untuk error atau sukses) - ditingkatkan dengan efek slide dan glow */
+.message {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(255, 0, 0, 0.2);
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+    animation: slideIn 0.5s ease-out, messageGlow 1s ease-in-out infinite alternate;
+    position: relative;
+    overflow: hidden;
+}
+
+.message::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.3), transparent);
+    animation: messageSlide 2s ease-in-out infinite;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes messageGlow {
+    0% { box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); }
+    100% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); }
+}
+
+@keyframes messageSlide {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Efek tambahan untuk pesan sukses/error */
+.message.success {
+    background: rgba(0, 255, 0, 0.2);
+    border: 1px solid rgba(0, 255, 0, 0.5);
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+}
+
+.message.success::before {
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.3), transparent);
+}
+
+.message.error {
+    background: rgba(255, 0, 0, 0.2);
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    color: #ff0000;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+/* Styling untuk label radio (sebagai kartu interaktif) - disesuaikan dengan HTML - ditingkatkan dengan efek 3D dan lebih banyak animasi */
+.status-options label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px; /* Tambahkan margin untuk spacing antar label */
+    transform-style: preserve-3d;
+}
+
+.status-options label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(30, 144, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+    z-index: -1;
+}
+
+.status-options label::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(30, 144, 255, 0.1), rgba(255, 20, 147, 0.1));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.status-options label:hover {
+    border-color: #1e90ff;
+    box-shadow: 0 0 25px rgba(30, 144, 255, 0.8), 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px) rotateX(5deg);
+}
+
+.status-options label:hover::before {
+    left: 100%;
+}
+
+.status-options label:hover::after {
+    opacity: 1;
+}
+
+.status-options input[type="radio"] {
+    display: none; /* Sembunyikan radio asli */
+}
+
+.status-options input[type="radio"]:checked + label {
+    background: linear-gradient(135deg, #1e90ff, #00bfff);
+    border-color: #1e90ff;
+    color: #fff;
+    box-shadow: 0 0 30px rgba(30, 144, 255, 1), 0 15px 30px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05) rotateX(0deg);
+    animation: selectedPulse 0.6s ease-out;
+}
+
+@keyframes selectedPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1.05); }
+}
+
+/* Tombol submit dengan efek hover scaling dan pulse - ditingkatkan dengan ripple dan lebih banyak efek */
+button[type="submit"] {
+    padding: 18px;
+    background: linear-gradient(135deg, #ff6b35, #f7931e); /* Gradient oranye-merah untuk aksi */
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(255, 107, 53, 0.5);
+    animation: pulse 2s infinite;
+    width: 100%; /* Lebar penuh untuk konsistensi */
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+button[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+button[type="submit"]:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 30px rgba(255, 107, 53, 0.7);
+}
+
+button[type="submit"]:hover::before {
+    left: 100%;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.95);
+}
+
+button[type="submit"]:active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 5px 20px rgba(255, 107, 53, 0.5); }
+    50% { box-shadow: 0 5px 20px rgba(255, 107, 53, 0.8); }
+}
+
+@keyframes ripple {
+    to {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
+
+/* Tombol kembali ke dashboard dengan efek berbeda (hijau-ungu) - ditingkatkan dengan lebih banyak efek */
+.back-btn {
+    padding: 15px;
+    background: linear-gradient(135deg, #4caf50, #9c27b0);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+    width: 100%; /* Lebar penuh */
+    position: relative;
+    overflow: hidden;
+}
+
+.back-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(76, 175, 80, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.back-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(76, 175, 80, 0.6);
+}
+
+.back-btn:hover::before {
+    left: 100%;
+}
+
+.back-btn:active {
+    transform: scale(0.98);
+}
+
+.back-btn:active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    animation: ripple 0.6s ease-out;
+}

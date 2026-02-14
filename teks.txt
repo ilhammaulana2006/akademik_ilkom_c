@@ -1,0 +1,1 @@
+ <p class="register-link">Belum punya akun? <a href="admin_register.php">Daftar di sini</a></p>

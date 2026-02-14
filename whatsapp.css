@@ -1,0 +1,474 @@
+/* Reset dasar untuk konsistensi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variabel CSS untuk tema hijau neon agar mudah dikustomisasi */
+:root {
+    --neon-green: #00ff88;
+    --dark-green: #25D366;
+    --whatsapp-green: #128C7E;
+    --glow-color: rgba(37, 211, 102, 0.6);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Body dengan gradien animasi keren sebagai pengganti background image, efek partikel, dan overlay untuk kedalaman */
+body {
+    /* Hapus background image dan ganti dengan gradien animasi yang dinamis */
+    background: linear-gradient(45deg, var(--neon-green), var(--dark-green), var(--whatsapp-green), var(--neon-green));
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite; /* Animasi gradien yang bergeser untuk efek keren */
+    margin: 0;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif; /* Font modern dan bold */
+    overflow: hidden; /* Mencegah scroll untuk efek penuh */
+    position: relative;
+    /* Efek parallax sederhana dengan transform */
+    transform: translateZ(0);
+}
+
+/* Keyframes untuk animasi gradien yang bergeser */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Efek partikel floating yang lebih banyak dan dinamis dengan variasi warna dan gerakan */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    background: var(--glow-color);
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite, pulse 2s ease-in-out infinite alternate;
+    /* Tambahkan variasi warna acak untuk partikel */
+    filter: hue-rotate(0deg);
+}
+
+.particle:nth-child(1) {
+    width: 10px;
+    height: 10px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+    filter: hue-rotate(0deg);
+}
+
+.particle:nth-child(2) {
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 80%;
+    animation-delay: 2s;
+    filter: hue-rotate(60deg);
+}
+
+.particle:nth-child(3) {
+    width: 8px;
+    height: 8px;
+    top: 70%;
+    left: 30%;
+    animation-delay: 4s;
+    filter: hue-rotate(120deg);
+}
+
+.particle:nth-child(4) {
+    width: 12px;
+    height: 12px;
+    top: 30%;
+    left: 60%;
+    animation-delay: 1s;
+    filter: hue-rotate(180deg);
+}
+
+.particle:nth-child(5) {
+    width: 20px;
+    height: 20px;
+    top: 80%;
+    left: 20%;
+    animation-delay: 3s;
+    filter: hue-rotate(240deg);
+}
+
+/* Tambahkan lebih banyak partikel untuk efek lebih padat */
+.particle:nth-child(6) {
+    width: 6px;
+    height: 6px;
+    top: 40%;
+    left: 40%;
+    animation-delay: 5s;
+    filter: hue-rotate(300deg);
+}
+
+.particle:nth-child(7) {
+    width: 18px;
+    height: 18px;
+    top: 10%;
+    left: 70%;
+    animation-delay: 6s;
+    filter: hue-rotate(30deg);
+}
+
+.particle:nth-child(8) {
+    width: 14px;
+    height: 14px;
+    top: 60%;
+    left: 15%;
+    animation-delay: 7s;
+    filter: hue-rotate(90deg);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0.3;
+    }
+    25% {
+        transform: translateY(-30px) translateX(10px) rotate(90deg);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-60px) translateX(-10px) rotate(180deg);
+        opacity: 1;
+    }
+    75% {
+        transform: translateY(-30px) translateX(10px) rotate(270deg);
+        opacity: 0.8;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+/* Container untuk menyusun elemen secara vertikal dengan animasi masuk yang lebih dramatis */
+.button-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000;
+    animation: slideInBounce 1.5s ease-out; /* Animasi masuk dengan bounce */
+}
+
+@keyframes slideInBounce {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(100px) scale(0.8);
+    }
+    50% {
+        opacity: 0.7;
+        transform: translate(-50%, -50%) translateY(-10px) scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateY(0) scale(1);
+    }
+}
+
+/* Tombol modern dengan efek glow neon, shimmer, dan animasi teks yang diperbaiki untuk lebih keren */
+.modern-php-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, var(--dark-green), var(--whatsapp-green), var(--neon-green)); /* Gradien hijau dengan aksen neon */
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700; /* Lebih bold */
+    text-decoration: none;
+    box-shadow: 0 4px 15px var(--glow-color), 0 0 20px rgba(37, 211, 102, 0.2); /* Glow effect */
+    transition: all 0.4s ease;
+    overflow: hidden;
+    min-width: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    /* Tambahkan shimmer effect yang lebih halus */
+    background-size: 200% 200%;
+    animation: shimmer 3s ease-in-out infinite;
+    /* Tambahkan text-shadow untuk efek neon pada teks */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px var(--neon-green);
+}
+
+.modern-php-button:hover {
+    background: linear-gradient(45deg, var(--neon-green), var(--dark-green), var(--whatsapp-green)); /* Gradien terbalik dengan neon */
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.8), 0 0 30px rgba(37, 211, 102, 0.5); /* Glow lebih kuat */
+    transform: translateY(-5px) rotateX(5deg) scale(1.05); /* Efek 3D lift dan scale */
+    /* Jaga shimmer saat hover untuk efek lebih dinamis */
+    animation: shimmer 1.5s ease-in-out infinite; /* Shimmer lebih cepat saat hover */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 30px var(--neon-green); /* Text glow lebih kuat */
+}
+
+.modern-php-button:active {
+    transform: translateY(0) rotateX(0deg) scale(1);
+}
+
+.modern-php-button i {
+    margin-right: 10px;
+}
+
+.modern-php-button img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Border putih untuk kontras */
+}
+
+.modern-php-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.8s, height 0.8s; /* Ripple lebih lama */
+}
+
+.modern-php-button:hover::before {
+    width: 400px;
+    height: 400px; /* Ripple lebih besar */
+}
+
+/* Animasi shimmer untuk tombol yang diperbaiki untuk lebih smooth */
+@keyframes shimmer {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Variasi untuk tombol dashboard dengan glow ungu dan animasi berbeda yang diperbaiki */
+.dashboard-btn {
+    background: linear-gradient(45deg, #667eea, #764ba2, #a855f7); /* Gradien ungu dengan neon */
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4), 0 0 20px rgba(102, 126, 234, 0.2);
+    animation: shimmerPurple 3s ease-in-out infinite;
+    /* Tambahkan text-shadow untuk konsistensi */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px #a855f7;
+}
+
+.dashboard-btn:hover {
+    background: linear-gradient(45deg, #a855f7, #667eea, #764ba2);
+    box-shadow: 0 6px 25px rgba(102, 126, 234, 0.8), 0 0 30px rgba(102, 126, 234, 0.5);
+    transform: translateY(-5px) rotateY(5deg) scale(1.05); /* Efek 3D berbeda */
+    /* Jaga shimmer saat hover */
+    animation: shimmerPurple 1.5s ease-in-out infinite;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 30px #a855f7;
+}
+
+@keyframes shimmerPurple {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Gaya untuk gambar di atas tombol dengan efek hover yang lebih dramatis dan glow */
+.top-image {
+    width: 100px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px var(--shadow-color), 0 0 20px var(--glow-color); /* Glow hijau */
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    filter: brightness(1.1) contrast(1.2); /* Sedikit lebih terang dan kontras */
+    /* Tambahkan efek blur pada hover untuk kedalaman */
+    backdrop-filter: blur(0px);
+}
+
+.top-image:hover {
+    transform: scale(1.2) rotate(5deg) perspective(1000px) rotateY(10deg); /* Zoom, rotasi, dan efek 3D */
+    box-shadow: 0 6px 25px var(--shadow-color), 0 0 30px var(--glow-color);
+    filter: brightness(1.3) contrast(1.5) saturate(1.2);
+    backdrop-filter: blur(5px);
+}
+
+/* Gaya untuk modal zoom dengan animasi yang lebih smooth dan efek 3D */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    animation: fadeInModal 0.5s ease;
+    backdrop-filter: blur(10px); /* Efek blur background */
+}
+
+@keyframes fadeInModal {
+    from { 
+        opacity: 0; 
+        backdrop-filter: blur(0px);
+    }
+    to { 
+        opacity: 1; 
+        backdrop-filter: blur(10px);
+    }
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px var(--shadow-color), 0 0 30px var(--glow-color);
+    transition: transform 0.5s ease, filter 0.5s ease; /* Zoom dan filter lebih smooth */
+    transform: scale(0.8);
+    filter: brightness(1);
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+    filter: brightness(1.1) contrast(1.1);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.close:hover {
+    color: var(--neon-green); /* Neon hijau */
+    transform: scale(1.2) rotate(90deg);
+}
+
+.zoom-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.zoom-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.zoom-btn:hover {
+    background: var(--neon-green); /* Neon hijau */
+    transform: scale(1.1) rotate(360deg); /* Efek rotasi penuh */
+    box-shadow: 0 4px 15px var(--glow-color);
+}
+
+/* Media Queries untuk Responsivitas dengan animasi yang disesuaikan */
+@media (max-width: 768px) {
+    .modern-php-button {
+        font-size: 16px;
+        padding: 12px 24px;
+        min-width: 250px;
+    }
+    .modern-php-button img {
+        width: 25px;
+        height: 25px;
+    }
+    .top-image {
+        width: 80px;
+    }
+    .button-container {
+        gap: 15px;
+    }
+    .modal-content {
+        max-width: 95%;
+        max-height: 95%;
+    }
+    .zoom-controls {
+        bottom: 10px;
+    }
+    .zoom-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+    .particles .particle {
+        animation-duration: 4s; /* Lebih cepat di mobile */
+    }
+    .button-container {
+        animation-duration: 1s; /* Animasi lebih cepat di mobile */
+    }
+}
+
+/* Tambah breakpoint untuk tablet dengan penyesuaian */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .modern-php-button {
+        font-size: 17px;
+        padding: 13px 26px;
+        min-width: 280px;
+    }
+    .modern-php-button img {
+        width: 35px;
+        height: 35px;
+    }
+    .top-image {
+        width: 90px;
+    }
+    .button-container {
+        gap: 18px;
+    }
+    .particles .particle {
+        animation-duration: 6s; /* Sedang di tablet */
+    }
+}

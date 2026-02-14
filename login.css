@@ -1,0 +1,109 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    border-radius: 25px;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.7);
+    background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin: 10px;
+    margin-top: 30px;  /* Ditambahkan margin-top untuk menurunkan posisi tombol */
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.5);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.7);
+    background: linear-gradient(135deg, #20c997, #28a745);
+}
+
+.btn-outline-info {
+    border: 2px solid #17a2b8;
+    color: #17a2b8;
+    border-radius: 15px;
+    padding: 8px 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin: 5px;
+    background: transparent;
+}
+
+.btn-outline-info:hover {
+    background: #17a2b8;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(23, 162, 184, 0.5);
+}
+
+.links {
+    margin-top: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #667eea;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #764ba2;
+}
